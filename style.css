@@ -1,0 +1,106 @@
+/* Configurações Globais */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f9;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+}
+
+h1{
+    margin: 16px 0 18px 0;
+    text-align: center;
+}
+
+.calculadora {
+    background-color: #202020;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
+    width: 280px;
+}
+
+/* Visor LCD */
+#visor {
+    width: 100%;
+    height: 60px;
+    background-color: #a3c1ad;
+    border: none;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    text-align: right;
+    padding: 10px;
+    box-sizing: border-box;
+    color: #111;
+    font-family: monospace;
+}
+
+/* Grid de Botões */
+.botoes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+/* Estilo Base dos Botões */
+button {
+    padding: 18px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    background-color: #e0e0e0;
+    color: #333;
+    transition: background-color 0.1s ease, transform 0.05s ease;
+}
+
+/* Efeito de Clique */
+button:active {
+    transform: scale(0.95);
+}
+
+/* Botões Numéricos */
+.btn-num:hover {
+    background-color: #d4d4d4;
+}
+
+/* Botões de Operação (+, -, *, /) */
+.btn-operador {
+    background-color: #ff9500;
+    color: white;
+}
+
+.btn-operador:hover {
+    background-color: #e08400;
+}
+
+/* Botões Especiais (C e =) */
+#btn-limpar {
+    background-color: #ff3b30;
+    color: white;
+    grid-column: span 2; /* Ocupa 2 colunas */
+}
+
+#btn-limpar:hover {
+    background-color: #d32f2f;
+}
+
+#btn-igual {
+    background-color: #34c759;
+    color: white;
+    grid-column: span 2; /* Ocupa 2 colunas */
+}
+
+#btn-igual:hover {
+    background-color: #28a745;
+}
+
+/* Ajuste para o botão Zero expandido */
+#btn-zero {
+    grid-column: span 2;
+}
